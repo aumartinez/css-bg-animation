@@ -22,7 +22,7 @@ body {
   margin: 60px auto;
   overflow: hidden;
   position: relative;
-  z-index: 1;
+  z-index: 1;  
 }
 
 .wrapper p {
@@ -49,37 +49,63 @@ body {
 }
 
 .lg-cont {
-  left: 5%;
-  transform: translateY(600px);
-  animation: up 25s infinite;
+  left: 0;
+  transform: translateY(300px);  
+  animation: up-mobile 25s infinite;
   animation-timing-function: linear;
 }
 
-.md-cont {  
+.md-cont {
   left: 65%;
-  transform: translateY(400px);
-  animation: up 25s infinite;
+  transform: translateY(150px);
+  animation: up-mobile 25s infinite;
   animation-timing-function: linear;
   animation-delay: 10s;
 }
 
-.lg-bubble {
-  width: 600px;
-  height: 600px;
+.lg-bubble {  
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
-  box-shadow: inset 0px 0px 100px 0px rgba(0, 0, 0, 0.75);
-  animation: scale 25s 1;
+  box-shadow: inset 0px 0px 100px 0px rgba(0, 0, 0, 0.75);  
+  animation: scale 25s infinite;
   animation-timing-function: linear;  
 }
 
 .md-bubble {
-  width: 400px;
-  height: 400px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   box-shadow: inset 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
-  animation: scale 25s 1;
-  animation-timing-function: linear;
+  animation: scale 25s infinite;
+  animation-timing-function: linear; 
   animation-delay: 10s;
+}
+
+@media (min-width:768px) {
+  .lg-cont{
+    left: 5%;
+    transform: translateY(600px);
+    animation: up 25s infinite;
+    animation-timing-function: linear;
+  }
+  
+  .md-cont {    
+    transform: translateY(300px);
+    animation: up 25s infinite;
+    animation-timing-function: linear;
+    animation-delay: 10s;
+  }
+  
+  .lg-bubble{
+    width: 600px;
+    height: 600px;    
+  }
+  
+  .md-bubble {
+    width: 300px;
+    height: 300px;    
+  }
 }
 
 @keyframes up {
@@ -92,6 +118,20 @@ body {
   100%{
     opacity: 0;
     transform: translateY(-150%);
+  }
+}
+
+
+@keyframes up-mobile {
+  0% {
+    opacity: 0;     
+  }
+  10%, 90%{
+    opacity: 1;    
+  }  
+  100%{
+    opacity: 0;
+    transform: translateY(-350%);
   }
 }
 
