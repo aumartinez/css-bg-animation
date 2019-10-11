@@ -1,0 +1,30 @@
+/* CSS */
+
+html, body{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.wrapper {
+  padding: 0 15px;
+  max-width: 660px;
+  margin: 60px auto;
+  overflow: hidden;
+}
+
+
+.wrapper p {
+  margin: 100px 0;
+}
